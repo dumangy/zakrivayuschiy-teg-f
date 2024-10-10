@@ -17,4 +17,525 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: 
+  repeating-linear-gradient(
+      90deg,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      #d3d3d3, 
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    
+    linear-gradient(
+      to bottom,
+      #e7e7e7 0.01%, 
+      #1a1a1a
+    );
+  background-size: cover;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    background: 
+      repeating-linear-gradient(
+        90deg,
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(
+        to bottom,
+        #007f0c 0.01%,
+        #004306
+      );
+    background-size: cover;
+  }
+}
+
+.header {
+  width: 375px;
+  height: 327px;
+  margin: 100px 0 100px;
+  background-color: #ffffff;
+  border: 2px black solid;
+}
+
+@media (min-width: 376px) {
+  .header {
+    width: 700px;
+    height: 368px;
+    margin: 100px auto;
+  }
+}
+
+.header__title {
+  font-family: "Press Start 2P";
+  font-size: 49px;
+  line-height: 49px;
+  padding-top: 127px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+@media (min-width: 376px) {
+  .header__title {
+    font-size: 65px;
+    line-height: 65px;
+    padding-top: 136px;
+  }
+}
+
+.header__subtitle {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+@media (min-width: 376px) {
+  .header__subtitle {
+    font-size: 23px;
+    line-height: 23px;
+  }
+}
+
+.theme-menu__list {
+  display: flex;
+  width: 84px;
+  height: 70px;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  border: none;
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  padding: 0;
+  position: relative; 
+  outline: none; 
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  appearance: none; 
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  animation: arrow 0.5s ease-in-out infinite alternate;
+  aspect-ratio: 1/1;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+
+.theme-menu__button:enabled::after {
+  content: "";
+  display: block;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  block-size: 2px;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+@keyframes arrow {
+  0% {
+    left: -21px;
+  }
+  100% {
+    left: -16px;
+  }
+}
+
+.theme-menu__button:hover,
+.theme-menu__button:focus-visible {
+  opacity: 0.6; 
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none; 
+}
+
+.theme-menu__button::after {
+  content: ""; 
+  position: absolute; 
+  left: 0; 
+  bottom: -5px; 
+  height: 2px; 
+  background-color: black; 
+  opacity: 0.6;
+  width: 100%; 
+  transform: scaleX(0); 
+  transform-origin: left; 
+  transition: transform 0.3s ease;
+}
+
+.theme-menu__button:hover::after,
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.post {
+  width: 375px;
+  border: 2px black solid;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 376px) {
+  .post {
+    width: 696px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+}
+
+.image__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.image__wrapper {
+  position: relative;
+}
+
+.watermark {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 14px;
+  opacity: 50%;
+  position: absolute;
+  top: 25px;
+  right: 13px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+}
+
+.post__title {
+  font-family: "Inter bold";
+  font-size: 18px;
+  line-height: 21.78px;
+  margin: 4px 10px 6px;
+}
+
+.post__image {
+  display: block;
+  width: 371px;
+  height: 371px;
+  object-fit: cover;
+  border: 2px black solid;
+  object-position: -175px;
+}
+
+@media (min-width: 376px) {
+  .post__image {
+    width: 696px;
+    height: 696px;
+    object-position: -340px;
+  }
+}
+
+.post__image_filter-1 {
+  filter: saturate(25%);
+}
+
+.post__image_filter-2 {
+  filter: saturate(250%);
+}
+
+.post__image_filter-3 {
+  filter: hue-rotate(35deg);
+}
+
+.post__image_filter-4 {
+  filter: invert(0.8);
+}
+
+.post__image_filter-5 {
+  filter: sepia(80%);
+}
+
+.post__image_filter-6 {
+  filter: blur(0.7rem);
+}
+
+.post__image_filter-7 {
+  filter: hue-rotate(120deg) saturate(0.5) blur(2px);
+}
+
+.post__content{
+  width: 371px;
+}
+
+@media (min-width: 376px) {
+  .post__content{
+    width: 100%;
+  }
+}
+
+.post__box {
+  width: 321px;
+  margin: 25px 25px 0 25px;
+}
+
+@media (min-width: 376px) {
+  .post__box {
+    width: 646px;
+  }
+}
+
+.post__text {
+  font-family: "Inter";
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.post__text:first-of-type {
+  padding-bottom: 27px;
+}
+
+.post__buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 25px 25px 25px 0;
+}
+
+.button_heart {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button_heart:focus {
+  border: none;
+}
+
+.button_heart:focus-visible {
+  outline: none;
+  border: 2px solid black;
+  border-radius: 0;
+  width: 38px;
+  height: 38px;
+  transition: 0.3s ease;
+}
+
+.heart {}
+
+.like-icon {}
+
+.contour {}
+
+.main-body {
+  fill: none;
+}
+
+.core {
+  fill: none;
+}
+
+.sparks {}
+
+.button_like {
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 0;
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  line-height: 12.6px;
+  width: 130px;
+  height: 38px;
+  margin-left: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.button_like::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: left 0.5s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+.button_like:hover::before {
+  left: 0;
+}
+
+.button_like .span {
+  position: relative; /* Для наложения текста на псевдоэлемент */
+  z-index: 1; /* Текст выше псевдоэлемента */
+  color: black; /* Цвет текста */
+}
+
+.button_like:hover, span
+.button_like:focus span {
+  color: white; /* Цвет текста при наведении или фокусе */
+  z-index: 2;
+}
+
+.button_like:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 black;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.footer {
+  width: 306px;
+  height: 84px;
+  margin: 52px 35px 100px;
+}
+
+@media (min-width: 376px) {
+  .footer {
+    width: 335px;
+    height: 55px;
+    margin: auto;
+    margin-bottom: 103px;
+    width: 335px;
+    height: 55px;
+    flex-wrap: wrap;
+  }
+}
+
+.footer__button {
+  border: 2px black solid;
+  width: 306px;
+  height: 84px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+@media (min-width: 376px) {
+  .footer__button {
+    margin: auto;
+    margin-bottom: 103px;
+    width: 335px;
+    height: 55px;
+    flex-wrap: wrap;
+  }
+}
+
+dialog {
+  width: 341px;
+  height: 191px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.button_save {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.button_save:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 black;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+@media (min-width: 376px) {
+  .button_save {
+    height: 55px;
+  }
+}
+
+.footer__text {
+  font-family: "Press Start 2P";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12.6px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.8);
+}
+
+.dialog__content {
+  width: 257px;
+  height: 63px;
+  margin: 30px 42px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog__text {
+  font-family: "Press Start 2P";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  width: 198px;
+}
+
+.dialog__button {
+  font-family: "Press Start 2P";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  border: 2px solid black;
+  width: 257px;
+  height: 38px;
+  margin: 30px 42px;
+  padding: 0;
+  cursor: pointer;
 }
