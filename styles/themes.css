@@ -5,3 +5,230 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
+.theme-light {
+    --background-image_color-1: #d3d3d3;
+    --background-image_color-2: #e7e7e7;
+    --background-image_color-3: #1a1a1a;
+    --background-color__header: #ffffff;
+    --header__title_color: black;
+    --header__subtitle_color: black;
+    --border__header_color: black;
+    --theme-menu__button_color: black;
+    --border__post_color: black;
+    --background-color__post: #ffffff;
+    --watermark_color: black;
+    --border__pi_color: black;
+    --border__button_heart: black;
+    --border__button_like: black;
+    --background-color__button_like: black;
+    --color__button_like: black;
+    --box-shadow__button_like: black;
+    --border__fb: black;
+    --box-shadow__button_save: black;
+    --border__db: black;
+    --watermark_border: #ffffff;
+    --post__title_color: black;
+    --post__text_color: black;
+    --background-color__fb: #ffffff;
+    --color__button_save: black;
+    --background-color__th-a: black;
+    --color__contour: black;
+    --color__sparks: red;
+}
+
+.theme-dark {
+    --background-image_color-1: #000;
+    --background-image_color-2: #007f0c;
+    --background-image_color-3: #004306;
+    --background-color__header: black;
+    --background-color__fb: black;
+    --background-color__th-a: #00CC14;
+    --border__header_color: #00CC14;
+    --header__title_color : #00CC14;
+    --header__subtitle_color : #00CC14;
+    --theme-menu__button_color: #00CC14;
+    --border__post_color: #00CC14;
+    --background-color__post: black;
+    --watermark_color: #00CC14;
+    --watermark_border: black;
+    --border__pi_color: #00CC14;
+    --post__title_color: #00CC14;
+    --post__text_color: #00CC14;
+    --border__button_heart: black; /*!!!!!!!!!!*/
+    --border__button_like: #00CC14;
+    --background-color__button_like: black; /*!!!!!!!!!!*/
+    --color__button_like: #00CC14; /*!!!!!!!!!!*/
+    --color__button_save: #00CC14;
+    --box-shadow__button_like: black;
+    --border__fb: #00CC14;
+    --box-shadow__button_save: black;
+    --border__db: #00CC14;
+    --border__dc: #00CC14;
+    --color__contour: #00CC14;
+}
+
+@media (prefers-color-scheme: light) {
+    .page {
+        background-image: 
+        repeating-linear-gradient(
+            90deg,
+            var(--background-image_color-1),
+            var(--background-image_color-1) 2px,
+            transparent 2px,
+            transparent 4px
+          ),
+          repeating-linear-gradient(
+            0deg,
+            var(--background-image_color-1), 
+            var(--background-image_color-1) 2px,
+            transparent 2px,
+            transparent 4px
+          ),
+          
+          linear-gradient(
+            to bottom,
+            var(--background-image_color-2) 0.01%, 
+            var(--background-image_color-3)
+          );
+        background-size: cover;
+      }
+
+    .header {
+        background-color: var(--background-color__header);
+        border: 2px var(--border__header_color) solid;
+    }
+
+    .header__title {
+        color: var(--header__title_color);
+    }
+
+    .header__subtitle {
+        color: var(--header__subtitle_color);
+    }
+
+    .watermark {
+        -webkit-text-stroke-color: var(--watermark_border);
+        color: var(--watermark_color);
+    }
+
+    .post__title {
+        color: var(--post__title_color);
+    }
+
+    .post__text {
+        color: var(--post__text_color);
+    }
+
+    .post__image {
+        border: 2px var(--border__pi_color) solid;
+    }
+
+    .contour {
+        fill: var(--color__contour);
+    }
+
+    .sparks {
+        fill: var(--color__sparks);
+    }
+
+    .card__like-button {
+        border: 2px solid var(--border__button_like);
+        color: var(--color__button_like);
+    }
+
+    .footer__button {
+        border: 2px var(--border__fb) solid;
+        background-color: var(--background-color__fb);
+    }
+
+    .button__text {
+        color: var(--color__button_save);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .page {
+      background: 
+        repeating-linear-gradient(
+          90deg,
+          var(--background-image_color-1),
+          var(--background-image_color-1) 2px,
+          transparent 2px,
+          transparent 4px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          var(--background-image_color-1),
+          var(--background-image_color-1) 2px,
+          transparent 2px,
+          transparent 4px
+        ),
+        linear-gradient(
+          to bottom,
+          var(--background-image_color-2) 0.01%,
+          var(--background-image_color-3)
+        );
+      background-size: cover;
+    }
+
+    .header {
+        background-color: var(--background-color__header);
+        border: 2px var(--border__header_color) solid;
+    }
+
+    .header__title {
+        color: var(--header__title_color);
+    }
+
+    .header__subtitle {
+        color: var(--header__subtitle_color);
+    }
+
+    .theme-menu__button {
+        color: var(--theme-menu__button_color);
+    }
+
+    .theme-menu__button::after {
+        background-color: var(--background-color__th-a);
+    }
+
+    .post {
+        background-color: var(--background-color__post);
+        border: 2px var(--border__post_color) solid;
+    }
+
+    .watermark {
+        -webkit-text-stroke-color: var(--watermark_border);
+        color: var(--watermark_color);
+    }
+
+    .post__title {
+        color: var(--post__title_color);
+    }
+
+    .post__text {
+        color: var(--post__text_color);
+    }
+
+    .post__image {
+        border: 2px var(--border__pi_color) solid;
+    }
+
+    .contour {
+        fill: var(--color__contour);
+    }
+
+    .card__like-button {
+        border: 2px solid var(--border__button_like);
+        color: var(--color__button_like);
+    }
+
+    .footer__button {
+        border: 2px var(--border__fb) solid;
+        background-color: var(--background-color__fb);
+    }
+
+    .button__text {
+        color: var(--color__button_save);
+    }
+}

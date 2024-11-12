@@ -1,1 +1,32 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --background-image_color-1: #d3d3d3;
+    --background-image_color-2: #e7e7e7;
+    --background-image_color-3: #1a1a1a;
+    --background-color__header: #ffffff;
+    --header__title_color: black;
+    --header__subtitle_color: black;
+    --border__header_color: black;
+    --theme-menu__button_color: black;
+    --border__post_color: black;
+    --background-color__post: #ffffff;
+    --watermark_color: black;
+    --border__pi_color: black;
+    --border__button_heart: black;
+    --border__button_like: black;
+    --background-color__button_like: black;
+    --color__button_like: black;
+    --box-shadow__button_like: black;
+    --border__fb: black;
+    --box-shadow__button_save: black;
+    --border__db: black;
+    --watermark_border: #ffffff;
+    --post__title_color: black;
+    --post__text_color: black;
+    --background-color__fb: #ffffff;
+    --color__button_save: black;
+    --background-color__th-a: black;
+    --color__contour: black;
+    --color__sparks: red;
+}
