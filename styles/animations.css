@@ -13,3 +13,69 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+@keyframes arrow {
+    0% {
+      left: -21px;
+    }
+    100% {
+      left: -16px;
+    }
+}
+
+.card__icon-button:focus {
+  border: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border: 2px solid black;
+  border-radius: 0;
+  width: 38px;
+  height: 38px;
+  transition: 0.3s ease;
+}
+
+.card__icon-button .heart .core {
+  fill: white;
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button .heart .main-body {
+  fill: #FF0000;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:hover .heart .core {
+  fill: black;
+  transition-delay: 0s;
+}
+
+.card__icon-button:hover .heart .main-body {
+  fill: black;
+  transition-delay: 0.05s;
+}
+
+.card__icon-button:not(:hover) .heart .core {
+  fill: white;
+  transition-delay: 0.33s;
+}
+
+.card__icon-button:not(:hover) .heart .main-body {
+  fill: transparent;
+  transition-delay: 0s;
+}
+
+.card__icon-button:active .heart .core,
+.card__icon-button:active .heart .main-body,
+.card__icon-button:focus .heart .core,
+.card__icon-button:focus .heart .main-body {
+  fill: #FF0000;
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:active .heart .contour,
+.card__icon-button:focus .heart .contour {
+    fill: #FF0000;
+    transition: fill 0.3s linear;
+}
+
