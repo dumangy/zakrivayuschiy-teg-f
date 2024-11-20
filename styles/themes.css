@@ -44,8 +44,8 @@
     --background-color__fb: black;
     --background-color__th-a: #00CC14;
     --border__header_color: #00CC14;
-    --header__title_color : #00CC14;
-    --header__subtitle_color : #00CC14;
+    --header__title_color: #00CC14;
+    --header__subtitle_color: #00CC14;
     --theme-menu__button_color: #00CC14;
     --border__post_color: #00CC14;
     --background-color__post: black;
@@ -54,16 +54,15 @@
     --border__pi_color: #00CC14;
     --post__title_color: #00CC14;
     --post__text_color: #00CC14;
-    --border__button_heart: black; /*!!!!!!!!!!*/
+    --border__button_heart: black;
     --border__button_like: #00CC14;
-    --background-color__button_like: black; /*!!!!!!!!!!*/
-    --color__button_like: #00CC14; /*!!!!!!!!!!*/
+    --background-color__button_like: black;
+    --color__button_like: #00CC14;
     --color__button_save: #00CC14;
-    --box-shadow__button_like: black;
+    --box-shadow__button_like: #00CC14;
+    --box-shadow__button_save: #00CC14;
     --border__fb: #00CC14;
-    --box-shadow__button_save: black;
     --border__db: #00CC14;
-    --border__dc: #00CC14;
     --color__contour: #00CC14;
     --color__sparks: red;
 }
