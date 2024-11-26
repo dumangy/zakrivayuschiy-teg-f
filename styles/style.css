@@ -60,6 +60,7 @@
   line-height: 14px;
   text-align: center;
   padding-bottom: 25px;
+  text-transform: uppercase;
 }
 
 @media (min-width: 376px) {
@@ -189,7 +190,7 @@
   opacity: 50%;
   position: absolute;
   top: 25px;
-  right: 13px;
+  right: 25px;
 }
 
 @supports (-webkit-text-stroke: 1px #ffffff) {
@@ -263,7 +264,7 @@
 
 .post__box {
   width: 321px;
-  margin: 25px 25px 0 25px;
+  margin: 27px 25px 0 25px;
 }
 
 @media (min-width: 376px) {

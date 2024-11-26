@@ -79,3 +79,8 @@
     transition: fill 0.3s linear;
 }
 
+.card__icon-button:active .sparks {
+  opacity: 1;
+  transition: fill 0.3s linear;
+}
+
