@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 
+
+<!-- Я НЕ ПОНИМАЮ ПОЧЕМУ НЕ РАБОТАЕТ ДЖАВА СКРИПТ В КНОПКАХ. ПОМОГИТЕ ПОЖАЛУЙСТА -->
+
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -522,7 +526,7 @@
     <footer class="footer">
         <button class="button_save" type="button" onclick="window['dialog-id'].showModal();" aria-controls="dialog-id">
             <span class="footer__button">
-                <svg width="28" height="28">
+                <svg class="footer__diskette">
                     <use xlink:href="#icon-diskette"></use>
                 </svg>
                 <span class="button__text">Сохранить на память</span>
@@ -530,7 +534,7 @@
         </button>
         <dialog id="dialog-id">
             <div class="dialog__content">
-                <svg width="39" height="39">
+                <svg class="dialog__diskette">
                     <use xlink:href="#icon-diskette"></use>
                 </svg>
                 <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>

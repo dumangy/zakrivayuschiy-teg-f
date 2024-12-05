@@ -398,6 +398,8 @@
     width: 335px;
     height: 55px;
     flex-wrap: wrap;
+    align-content: center;
+
   }
 }
 
@@ -405,6 +407,8 @@ dialog {
   width: 341px;
   padding: 0;
   overflow: hidden;
+  border: 2px solid black;
+  background-color: #ffffff;
 }
 
 .button_save {
@@ -458,6 +462,7 @@ dialog::backdrop {
   line-height: 21px;
   text-transform: uppercase;
   width: 198px;
+  color: black;
 }
 
 .dialog__button {
@@ -467,9 +472,31 @@ dialog::backdrop {
   line-height: 21px;
   text-transform: uppercase;
   border: 2px solid black;
+  background-color: #ffffff;
   width: 257px;
   height: 38px;
   margin: 30px 42px;
   padding: 0;
   cursor: pointer;
+  color: black;
+}
+
+.footer__diskette {
+  fill: none;
+  width: 28px;
+  height: 28px;
+}
+
+@media (min-width: 376px) {
+  .footer__diskette {
+    width: 21px;
+    height: 21px;
+    margin-right: 8px;
+  }
+}
+
+.dialog__diskette {
+  fill: none;
+  width: 39px;
+  height: 39px
 }
