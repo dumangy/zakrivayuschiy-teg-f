@@ -22,6 +22,7 @@
     --box-shadow__button_save: black;
     --border__db: black;
     --watermark_border: #ffffff;
+    --watermark: #ffffff;
     --post__title_color: black;
     --post__text_color: black;
     --background-color__fb: #ffffff;
@@ -35,5 +36,115 @@
     --background-color__db: #ffffff;
     --color__db__text: black;
     --color__fd: black;
-    --colot_dd: black;
+    --colot__dd: black;
+}
+
+@media (prefers-color-scheme: light) {
+    .page {
+      background: 
+        repeating-linear-gradient(
+          90deg,
+          var(--background-image_color-1),
+          var(--background-image_color-1) 2px,
+          transparent 2px,
+          transparent 4px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          var(--background-image_color-1),
+          var(--background-image_color-1) 2px,
+          transparent 2px,
+          transparent 4px
+        ),
+        linear-gradient(
+          to bottom,
+          var(--background-image_color-2) 0.01%,
+          var(--background-image_color-3)
+        );
+    }
+
+    .header {
+        background-color: var(--background-color__header);
+        border: 2px var(--border__header_color) solid;
+    }
+
+    .header__title {
+        color: var(--header__title_color);
+    }
+
+    .header__subtitle {
+        color: var(--header__subtitle_color);
+    }
+
+    .theme-menu__button {
+        color: var(--theme-menu__button_color);
+    }
+
+    .theme-menu__button::after {
+        background-color: var(--background-color__th-a);
+    }
+
+    .post {
+        background-color: var(--background-color__post);
+        border: 2px var(--border__post_color) solid;
+    }
+
+    .watermark {
+        -webkit-text-stroke-color: var(--watermark_border);
+        -webkit-text-stroke: var(--watermark);
+        color: var(--watermark_color);
+    }
+
+    .post__title {
+        color: var(--post__title_color);
+    }
+
+    .post__text {
+        color: var(--post__text_color);
+    }
+
+    .post__image {
+        border: 2px var(--border__pi_color) solid;
+    }
+
+    .contour {
+        fill: var(--color__contour);
+    }
+
+    .card__like-button {
+        border: 2px solid var(--border__button_like);
+        color: var(--color__button_like);
+    }
+
+    .footer__button {
+        border: 2px var(--border__fb) solid;
+        background-color: var(--background-color__fb);
+    }
+
+    .button__text {
+        color: var(--color__button_save);
+    }
+
+    dialog {
+        background-color: var(--background-color__dialog);
+        border: 2px solid var(--border__dialog);
+    }
+
+    .dialog__text {
+        color: var(--color__dialog__text);
+    }
+
+    .dialog__button {
+        border: 2px solid var(--border__db);
+        background-color: var(--background-color__db);
+        color: var(--color__db__text);
+    }
+
+    .footer__diskette {
+        fill: var(--color__fd);
+    }
+
+    .dialog__diskette {
+        fill: var(--color__dd);
+    }
 }

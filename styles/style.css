@@ -35,6 +35,7 @@
 
 .header__title {
   font-family: "Press Start 2P", "Inter";
+  font-variation-settings: 'wght' 400;
   font-size: 49px;
   line-height: 49px;
   padding-top: 127px;
@@ -56,6 +57,7 @@
 
 .header__subtitle {
   font-family: "Press Start 2P", "Inter";
+  font-variation-settings: 'wght' 400;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
@@ -191,12 +193,15 @@
   position: absolute;
   top: 25px;
   right: 25px;
+  mix-blend-mode: normal;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
 
 @supports (-webkit-text-stroke: 1px #ffffff) {
   .watermark {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke: #ffffff;
   }
 }
 
@@ -297,16 +302,21 @@
   cursor: pointer;
 }
 
+.card__icon-button:focus {
+  border: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border: 2px solid black;
+  border-radius: 0;
+  width: 38px;
+  height: 38px;
+  transition: 0.3s ease;
+}
+
 .main-body {
   fill: none;
-}
-
-.core {
-  fill: none;
-}
-
-.sparks {
-  opacity: 0;
 }
 
 .card__like-button {
@@ -368,7 +378,6 @@
     width: 335px;
     margin: auto;
     margin-bottom: 103px;
-    width: 335px;
     flex-wrap: wrap;
   }
 }
@@ -482,7 +491,6 @@ dialog::backdrop {
 }
 
 .footer__diskette {
-  fill: none;
   width: 28px;
   height: 28px;
 }
@@ -496,7 +504,6 @@ dialog::backdrop {
 }
 
 .dialog__diskette {
-  fill: none;
   width: 39px;
   height: 39px
 }
