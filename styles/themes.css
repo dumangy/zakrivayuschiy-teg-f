@@ -5,44 +5,6 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-.theme-light {
-    --background-image_color-1: #d3d3d3;
-    --background-image_color-2: #e7e7e7;
-    --background-image_color-3: #1a1a1a;
-    --background-color__header: #ffffff;
-    --header__title_color: black;
-    --header__subtitle_color: black;
-    --border__header_color: black;
-    --theme-menu__button_color: black;
-    --border__post_color: black;
-    --background-color__post: #ffffff;
-    --watermark_color: black;
-    --border__pi_color: black;
-    --border__button_heart: black;
-    --border__button_like: black;
-    --background-color__button_like: black;
-    --color__button_like: black;
-    --box-shadow__button_like: black;
-    --border__fb: black;
-    --box-shadow__button_save: black;
-    --border__db: black;
-    --watermark_border: #ffffff;
-    --post__title_color: black;
-    --post__text_color: black;
-    --background-color__fb: #ffffff;
-    --color__button_save: black;
-    --background-color__th-a: black;
-    --color__contour: black;
-    --color__sparks: red;
-    --background-color__dialog: #ffffff;
-    --color__dialog__text: black;
-    --border__dialog: black;
-    --background-color__db: #ffffff;
-    --color__db__text: black;
-    --color__fd: black;
-    --colot__dd: black;
-}
-
 .theme-dark {
     --background-image_color-1: #000;
     --background-image_color-2: #007f0c;
@@ -59,6 +21,10 @@
     --watermark_color: #00CC14;
     --watermark_border: black;
     --watermark: black;
+    --watermark_text-shadow1: black;
+    --watermark_text-shadow2: black;
+    --watermark_text-shadow3: black;
+    --watermark_text-shadow4: black;
     --border__pi_color: #00CC14;
     --post__title_color: #00CC14;
     --post__text_color: #00CC14;
@@ -137,6 +103,7 @@
         -webkit-text-stroke-color: var(--watermark_border);
         -webkit-text-stroke: var(--watermark);
         color: var(--watermark_color);
+        text-shadow: -1px -1px 0 var(--watermark_text-shadow1), 1px -1px 0 var(--watermark_text-shadow2), -1px 1px 0 var(--watermark_text-shadow3), 1px 1px 0 var(--watermark_text-shadow4);
     }
 
     .post__title {

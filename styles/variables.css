@@ -16,17 +16,21 @@
     --border__button_heart: black;
     --border__button_like: black;
     --background-color__button_like: black;
-    --color__button_like: black;
+    --color__button_like: white;
     --box-shadow__button_like: black;
     --border__fb: black;
     --box-shadow__button_save: black;
     --border__db: black;
     --watermark_border: #ffffff;
     --watermark: #ffffff;
+    --watermark_text-shadow1: #ffffff;
+    --watermark_text-shadow2: #ffffff;
+    --watermark_text-shadow3: #ffffff;
+    --watermark_text-shadow4: #ffffff;
     --post__title_color: black;
     --post__text_color: black;
     --background-color__fb: #ffffff;
-    --color__button_save: black;
+    --color__button_save: white;
     --background-color__th-a: black;
     --color__contour: black;
     --color__sparks: red;
@@ -36,7 +40,7 @@
     --background-color__db: #ffffff;
     --color__db__text: black;
     --color__fd: black;
-    --colot__dd: black;
+    --color__dd: black;
 }
 
 @media (prefers-color-scheme: light) {
@@ -93,6 +97,7 @@
         -webkit-text-stroke-color: var(--watermark_border);
         -webkit-text-stroke: var(--watermark);
         color: var(--watermark_color);
+        text-shadow: -1px -1px 0 var(--watermark_text-shadow1), 1px -1px 0 var(--watermark_text-shadow2), -1px 1px 0 var(--watermark_text-shadow3), 1px 1px 0 var(--watermark_text-shadow4);
     }
 
     .post__title {

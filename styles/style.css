@@ -38,7 +38,7 @@
   font-variation-settings: 'wght' 400;
   font-size: 49px;
   line-height: 49px;
-  padding-top: 127px;
+  padding-top: 120px;
   padding-bottom: 20px;
   text-align: center;
 }
@@ -78,6 +78,7 @@
   flex-direction: column;
   margin: auto;
   justify-content: center;
+  margin-bottom: 11px;
 }
 
 .theme-menu__button {
@@ -193,7 +194,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  mix-blend-mode: normal;
+  mix-blend-mode: hard-light;
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
 }
 
@@ -291,7 +292,6 @@
 .post__buttons {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   margin: 25px 25px 25px 0;
 }
 
@@ -300,6 +300,10 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  width: 27px;
+  height: 24px;
+  margin-right: 15px;
+  margin-top: 2px;
 }
 
 .card__icon-button:focus {
@@ -328,38 +332,9 @@
   line-height: 12.6px;
   width: 130px;
   height: 38px;
-  margin-left: 12px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-}
-
-.card__like-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  transition: left 0.5s ease-in-out;
-  mix-blend-mode: difference;
-}
-
-.card__like-button:hover::before {
-  left: 0;
-}
-
-.card__like-button .span {
-  position: relative;
-  z-index: 1;
-  color: black;
-}
-
-.card__like-button:hover, span
-.card__like-button:focus span {
-  color: white;
-  z-index: 2;
 }
 
 .card__like-button:focus {
@@ -392,7 +367,6 @@
   border: 2px black solid;
   width: 306px;
   height: 84px;
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -440,6 +414,38 @@ dialog {
   }
 }
 
+.button_save::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Цвет псевдоэлемента (чёрный) */
+  transform: translateX(-100%); /* Начальное положение: слева за пределами кнопки */
+  transition: transform 0.5s ease-in-out; /* Плавность анимации */
+}
+
+.button_save:hover::before {
+  transform: translateX(0); /* Конечное положение: полностью внутри кнопки */
+}
+
+.card__like-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Цвет псевдоэлемента (чёрный) */
+  transform: translateX(-100%); /* Начальное положение: слева за пределами кнопки */
+  transition: transform 0.5s ease-in-out; /* Плавность анимации */
+}
+
+.card__like-button:hover::before {
+  transform: translateX(0); /* Конечное положение: полностью внутри кнопки */
+}
+
 .button__text {
   font-family: "Press Start 2P", "Inter";
   font-weight: 400;
@@ -450,6 +456,8 @@ dialog {
   padding: 0;
   cursor: pointer;
   margin-top: 8px;
+  z-index: 2;
+  mix-blend-mode: difference;
 }
 
 dialog::backdrop {
@@ -493,6 +501,7 @@ dialog::backdrop {
 .footer__diskette {
   width: 28px;
   height: 28px;
+  color: black;
 }
 
 @media (min-width: 376px) {
@@ -505,5 +514,6 @@ dialog::backdrop {
 
 .dialog__diskette {
   width: 39px;
-  height: 39px
+  height: 39px;
+  color: black;
 }
